@@ -1,0 +1,21 @@
+{% load cms_tags sekizai_tags %}
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  {% render_block "css" %}
+
+</head>
+{% cms_toolbar %}
+<body>
+<div class="container">
+<h2>page</h2>
+      {% placeholder base_content %}
+      {% block base_content %}{% endblock %}
+      {% render_block "js" %}
+</div>
+</body>
+</html>
+
+
